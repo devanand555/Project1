@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Demo - Top Movies of 2024 in India</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); 
+            gap: 1.5rem;
+        }
+        .movie-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .movie-card .info {
+            padding: 1rem;
+            text-align: center;
+        }
+        .movie-card .info h3 {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: #6200ea;
+        }
+        .movie-card .info p {
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #6200ea;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>API Demo - Top Movies of 2024 in India</h1>
+        <p>Fetching movie data dynamically using an API</p>
+    </header>
+    <div class="container" id="movies-container">
+        <!-- Movie cards will be inserted here dynamically -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Top Movies. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mock API URL (replace this with your actual API endpoint)
+        const apiUrl = "file:///C:/Project1/index.html";
+
+        async function fetchMovies() {
+            try {
+                const response = await fetch(apiUrl);
+                const movies = await response.json();
+
+                const container = document.getElementById('movies-container');
+
+                // Loop through the movies and create movie cards
+                movies.forEach(movie => {
+                    const movieCard = document.createElement('div');
+                    movieCard.className = 'movie-card';
+
+                    movieCard.innerHTML = `
+                        <img src="${movie.image}" alt="${movie.title}">
+                        <div class="info">
+                            <h3>${movie.title}</h3>
+                            <p>${movie.genre}</p>
+                            <p><strong>Rating:</strong> ${movie.rating}/10</p>
+                        </div>
+                    `;
+
+                    container.appendChild(movieCard);
+                });
+            } catch (error) {
+                console.error("Failed to fetch movies:", error);
+            }
+        }
+
+        // Call the fetchMovies function when the page loads
+        fetchMovies();
+    </script>
+</body>
+</html>

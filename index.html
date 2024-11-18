@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoviesMela</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #6200ea;
+      color: white;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 2rem auto;
+      gap: 1.5rem;
+      padding: 0 1rem;
+    }
+
+    .movies-section {
+      flex: 2;
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .movies-section h2 {
+      color: #6200ea;
+      margin-bottom: 1rem;
+    }
+
+    .movies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .movie-card {
+      background-color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .movie-card h3 {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    .video-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-section h2 {
+      color: #6200ea;
+      margin-bottom: 1rem;
+    }
+
+    .video-section video {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #6200ea;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Movies of India</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="api-demo.html">API Demo</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="main-content">
+    <!-- Movies Section -->
+    <section class="movies-section">
+      <h2>Top Movies of 2024</h2>
+      <div class="movies-grid">
+        <div class="movie-card">
+          <img src="C:\Project1\image5.jpg" alt="GOAT">
+          <h3>GOAT</h3>
+        </div>
+        <div class="movie-card">
+          <img src="C:\Project1\image6.jpg" alt="BHOOL BHULAIYA 3">
+          <h3>BHOOL BHULAIYA</h3>
+        </div>
+        <div class="movie-card">
+          <img src="C:\Project1\image7.jpeg" alt="SHAITAN">
+          <h3>SHAITAN</h3>
+        </div>
+        <div class="movie-card">
+          <img src="C:\Project1\image4.jpg" alt="STREE">
+          <h3>STREE 2 </h3>
+        </div>
+        <div class="movie-card">
+            <img src="C:\Project1\image.jpg" alt="KALKI">
+            <h3>KALKI </h3>
+          </div>
+          <div class="movie-card">
+            <img src="C:\Project1\image3.jpg" alt="DEVARA">
+            <h3>DEVARA </h3>
+          </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <iframe 
+    width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/bC36d8e3bb0" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 MoviesMela.com. All rights reserved.</p>
+  </footer>
+</body>
+</html>

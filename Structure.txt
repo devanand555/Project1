@@ -1,0 +1,15 @@
+project-folder/
+├── app.js (main Express application file)
+├── data/
+│   └── items.json (JSON file with 6 objects)
+├── public/
+│   ├── index.html
+│   ├── about.html
+│   ├── api-demo.html
+│   ├── contact.html
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/ (add relevant media files here)
+└── package.json
